@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    <title>Summary Statistics</title>
+</head>
+<body>
+    <h1>Summary Statistics</h1>
+    <div>
+        {{ summary|safe }}
+    </div>
+    <h2>Missing Values</h2>
+    <div>
+        {{ missing_values|safe }}
+    </div>
+    <br>
+    <form action="{% url 'handle_missing_values' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Handle Missing Values</button>
+    </form>
+    <br>
+    <a href="{% url 'upload_file' %}">Upload Another File</a>
+    <br>
+    <a href="{% url 'show_first_five_records' %}">Show First 5 Records</a>
+    <br>
+    <a href="{% url 'generate_histograms' %}">Generate Histograms</a>
+    <br>
+    <a href="{% url 'generate_scatter_plots' %}">Generate Scatter-Plot</a>
+    <br>
+    <a href="{% url 'generate_heatmaps' %}">Generate Heatmap</a>
+    <br>
+    <a href="{% url 'generate_box_plots' %}">Generate Box-Plot</a>
+</body>
+</html>

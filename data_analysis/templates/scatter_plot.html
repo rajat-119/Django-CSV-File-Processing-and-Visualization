@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Scatter Plots</title>
+</head>
+<body>
+    <h1>Scatter Plots</h1>
+    {% for plot_path in plot_paths %}
+        <div>
+            <img src="{{ plot_path }}" alt="Scatter Plot for {{ plot_path }}">
+        </div>
+    {% endfor %}
+    <br>
+    <a href="{% url 'upload_file' %}">Upload Another File</a>
+    <br>
+    <a href="{% url 'show_first_five_records' %}">Show First 5 Records</a>
+    <br>
+    <a href="{% url 'show_summary_statistics' %}">Show Summary Statistics</a>
+    <br>
+    <a href="{% url 'generate_histograms' %}">Generate Histograms</a>
+    <br>
+    <a href="{% url 'generate_heatmaps' %}">Generate Heatmap</a>
+    <br>
+    <a href="{% url 'generate_box_plots' %}">Generate Box-Plot</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>First 5 Records</title>
+</head>
+<body>
+    <h1>First 5 Records</h1>
+    <div>
+        {{ records|safe }}
+    </div>
+    <a href="{% url 'upload_file' %}">Upload Another File</a>
+    <br>
+    <a href="{% url 'show_summary_statistics' %}">Show Summary Statistics</a>
+    <br>
+    <a href="{% url 'generate_histograms' %}">Generate Histograms</a>
+    <br>
+    <a href="{% url 'generate_scatter_plots' %}">Generate Scatter-Plot</a>
+    <br>
+    <a href="{% url 'generate_heatmaps' %}">Generate Heatmap</a>
+    <br>
+    <a href="{% url 'generate_box_plots' %}">Generate Box-Plot</a>
+</body>
+</html>
