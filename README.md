@@ -61,7 +61,10 @@ Upload CSV File: Upload a CSV file through the upload page.
   
 
 ## Project Structure:
-- data_analysis/: Contains the Django application.
+- The name of our main Django project is fileupload.
+- The app we created for the mian functionality is by the name data_analysis.
+- data_analysis/: Contains the Django app files.
+- data_analysis/views.py: contians all the logics and main code.
 - data_analysis/templates/: Contains the HTML templates for the application.
 - views.py: Contains the views for handling file uploads, displaying records, summary statistics, handling missing values, and generating plots.
 - urls.py: Contains the URL patterns for the application.
